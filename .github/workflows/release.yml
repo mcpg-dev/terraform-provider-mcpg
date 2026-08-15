@@ -1,0 +1,16 @@
+# Thin shim: fires on the v{version} release tag and calls the shared
+# non-Rust release workflow with this repo's tier. Managed by the release
+# pipeline — changes made here are overwritten.
+name: Release
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+permissions:
+  contents: write
+  id-token: write
+  packages: write
+jobs:
+  release:
+    uses: mcpg-dev/.github/.github/workflows/release-go.yml@main
+    secrets: inherit
