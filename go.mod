@@ -4,8 +4,8 @@ go 1.26.0
 
 require (
 	github.com/hashicorp/terraform-plugin-framework v1.19.0
-	k8s.io/apimachinery v0.37.0
-	k8s.io/client-go v0.37.0
+	k8s.io/apimachinery v0.37.1
+	k8s.io/client-go v0.37.1
 )
 
 require (
